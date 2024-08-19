@@ -82,4 +82,4 @@ const Beers = () => {
     return <div>{beersMapped}</div> ;
 };
 
-export default Beers;
+export {Beers,beers};

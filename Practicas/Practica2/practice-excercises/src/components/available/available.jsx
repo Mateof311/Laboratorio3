@@ -1,5 +1,7 @@
 import BeerItem from "../beerItem/BeerItem"
 
+//Crear un componente donde se muestren en pantalla solo las cervezas disponibles.
+
 const beers = [
     {
         id: 1,
