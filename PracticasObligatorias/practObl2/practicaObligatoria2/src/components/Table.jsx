@@ -4,8 +4,9 @@
 //Utilizar obligatoriamente la función reduce para calcular el promedio.
 
 const Table =({array}) => {
-    const incomes = array.map(company => company.income);
-    const average= incomes.reduce((acc, curr) => acc + curr, 0);
+    const incomes= array.map(company => company.income);
+    const incomeSum= incomes.reduce((acc, company) => acc + company, 0);
+    const average = (incomeSum / incomes.length).toFixed(3);
     return(
         <div>
             <table>
@@ -16,17 +17,15 @@ const Table =({array}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Marca A</td>
-                        <td>$1,000,000</td>
-                    </tr>
-                    <tr>
-                        <td>Marca B</td>
-                        <td>$2,500,000</td>
-                    </tr>
+                    {array.map((company, index) => (
+                        <tr key={index}>
+                            <td>{company.brand}</td>
+                            <td>{company.income}</td>
+                        </tr>
+                    ))}
                 </tbody>
             </table>
-            <p>Promedio de ingreso neto entre todas las companias: {average}</p>
+            <p>Promedio de ingreso neto entre todas las companias: ${average}</p>
         </div>
     )
 }
