@@ -9,6 +9,7 @@ function App() {
   const average = (incomeSum / incomes.length).toFixed(0);
   return (
     <div>
+      <h3>Ingresos Brutos</h3>
       <Table netIncomes={netIncomes}/>
       <p>Promedio de ingreso neto entre todas las compañias: ${average}</p>
     </div>
