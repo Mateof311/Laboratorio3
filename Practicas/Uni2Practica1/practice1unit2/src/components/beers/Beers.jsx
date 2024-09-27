@@ -63,3 +63,5 @@ const beers = [
         available: false,
     },
 ];
+
+export default beers;
